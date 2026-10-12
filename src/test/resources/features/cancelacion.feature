@@ -9,7 +9,7 @@ Característica: Mis reservas y cancelación
     Dado que inicié sesión como "dueno"
     Y tengo registrado el perro "Toby" de 8 kg (Pequeño)
 
-  @CA-CAN-1 @CA-CAN-2 @CA-CAN-3 @CA-CAN-4 @positivo @critico @borde @depende-fecha @smoke
+  @CA-CAN-1 @CA-CAN-2 @CA-CAN-3 @CA-CAN-4 @positivo @critico @borde @depende-fecha @smoketest
   Esquema del escenario: 13 - El reembolso depende de los días que faltan para la entrada
     Dado que "Toby" tiene una reserva Confirmada de 2 noches por $80.000 con entrada el día +<dias>
     Cuando cancelo la reserva y acepto la confirmación

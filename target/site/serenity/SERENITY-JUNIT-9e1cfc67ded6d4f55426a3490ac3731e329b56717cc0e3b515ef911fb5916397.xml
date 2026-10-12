@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Acceso a PetStay" skipped="0" tests="2" time="5.78" timestamp="2026-10-11 09:22:09"><testcase name="1 - Ingreso con credenciales válidas"/><testcase name="2 - Ingreso con contraseña incorrecta"/></testsuite>

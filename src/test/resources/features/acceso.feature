@@ -5,7 +5,7 @@ Característica: Acceso a PetStay
   quiero iniciar sesión con mi usuario y contraseña
   para usar los servicios del hotel
 
-  @CA-ACC-1 @positivo @alto @smoke
+  @CA-ACC-1 @positivo @alto @smoketest
   Escenario: 1 - Ingreso con credenciales válidas
     Dado que estoy en la pantalla de inicio de sesión
     Cuando ingreso el usuario "dueno" y la contraseña "huellitas123"

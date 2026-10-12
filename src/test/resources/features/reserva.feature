@@ -25,7 +25,7 @@ Característica: Reserva de estadía
       | 8      | $320.000    | $48.000   | $272.000   | primera con descuento |
       | 30     | $1.200.000  | $180.000  | $1.020.000 | estadía máxima        |
 
-  @CA-RES-6 @CA-RES-7 @CA-RES-8 @CA-RES-10 @positivo @critico @smoke
+  @CA-RES-6 @CA-RES-7 @CA-RES-8 @CA-RES-10 @positivo @critico @smoketest
   Escenario: 8 - El descuento no se aplica a los servicios
     Cuando preparo una reserva para "Rocky" con entrada el día +5 y 10 noches
     Y agrego "Baño y peluquería" y "Paseo diario"

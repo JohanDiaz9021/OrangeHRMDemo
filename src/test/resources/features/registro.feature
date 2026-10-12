@@ -9,7 +9,7 @@ Característica: Registro de mascotas
     Dado que inicié sesión como "dueno"
     Y no tengo mascotas registradas
 
-  @CA-REG-2 @negativo @critico @smoke
+  @CA-REG-2 @negativo @critico @smoketest
   Escenario: 3 - No se registra una mascota sin vacunas al día
     Cuando registro una mascota "Luna", gato, 4 kg, 3 años, vacunas "no"
     Entonces veo el mensaje "No podemos hospedar mascotas sin vacunas al día"
