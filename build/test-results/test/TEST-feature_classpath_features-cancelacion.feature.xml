@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Mis reservas y cancelación" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-12T02:22:15.277Z" hostname="JOHAN" time="60.474">
+  <properties/>
+  <testcase name="14 - Si no confirmo la cancelación, la reserva se mantiene" classname="feature_classpath_features/cancelacion.feature" time="8.877"/>
+  <testcase name="15 - Una reserva cancelada no se puede volver a cancelar" classname="feature_classpath_features/cancelacion.feature" time="10.59"/>
+  <system-out><![CDATA[
+@HU-02 @cancelacion @CA-CAN-2 @positivo @medio
+?[1mEscenario:?[22m 14 - Si no confirmo la cancelación, la reserva se mantiene                           ?[90m# classpath:features/cancelacion.feature:27?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                                         ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Toby"?[22m de ?[1m8?[22m kg (?[1mPequeño?[22m)?[39m                                        ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque ?[1m"Toby"?[22m tiene una reserva Confirmada de ?[1m2?[22m noches por ?[1m$80.000?[22m con entrada el día ?[1m+10?[22m?[39m ?[90m# com.petstay.stepdefinitions.CancellationStepDefinitions.hasAConfirmedBookingFor(java.lang.String,int,java.lang.String,java.time.LocalDate)?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mcancelo la reserva y rechazo la confirmación?[39m                                         ?[90m# com.petstay.stepdefinitions.CancellationStepDefinitions.cancelsAndDeclines()?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mla reserva sigue en estado ?[1m"Confirmada"?[22m?[39m                                            ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.bookingHasStatus(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mla lista no muestra reembolso para esa reserva?[39m                                            ?[90m# com.petstay.stepdefinitions.CancellationStepDefinitions.listShowsNoRefund()?[39m
+
+@HU-02 @cancelacion @CA-CAN-4 @negativo @alto
+?[1mEscenario:?[22m 15 - Una reserva cancelada no se puede volver a cancelar                  ?[90m# classpath:features/cancelacion.feature:34?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                              ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Toby"?[22m de ?[1m8?[22m kg (?[1mPequeño?[22m)?[39m                             ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque ?[1m"Toby"?[22m tiene una reserva en estado ?[1m"Cancelada"?[22m con reembolso de ?[1m$80.000?[22m?[39m ?[90m# com.petstay.stepdefinitions.CancellationStepDefinitions.hasABookingWithStatus(java.lang.String,java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mla opción de cancelar no está disponible para esa reserva?[39m               ?[90m# com.petstay.stepdefinitions.CancellationStepDefinitions.cancelOptionIsNotAvailable()?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mel reembolso mostrado sigue siendo ?[1m"$80.000"?[22m?[39m                                   ?[90m# com.petstay.stepdefinitions.CancellationStepDefinitions.refundIsStill(java.lang.String)?[39m
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+]]></system-err>
+</testsuite>

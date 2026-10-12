@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ejemplos" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-12T02:23:25.141Z" hostname="JOHAN" time="29.653">
+  <properties/>
+  <testcase name="Example #1.1" classname="Ejemplos" time="11.282"/>
+  <testcase name="Example #1.2" classname="Ejemplos" time="4.475"/>
+  <testcase name="Example #1.3" classname="Ejemplos" time="3.832"/>
+  <testcase name="Example #1.4" classname="Ejemplos" time="4.927"/>
+  <testcase name="Example #1.5" classname="Ejemplos" time="5.137"/>
+  <system-out><![CDATA[
+@HU-02 @registro @CA-REG-1 @CA-REG-3 @CA-REG-5 @positivo @alto @borde
+?[1mEsquema del escenario:?[22m 4 - Se aceptan valores en el borde y el tamaño se asigna según el peso ?[90m# classpath:features/registro.feature:25?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                                       ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mno tengo mascotas registradas?[39m                                                           ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.hasNoPets()?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mregistro una mascota ?[1m"Bo"?[22m, ?[1mperro?[22m, ?[1m10?[22m kg, ?[1m0?[22m años, vacunas ?[1m"sí"?[22m?[39m                      ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.registersAPet(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mla lista muestra ?[1m"Bo"?[22m, ?[1m"Perro"?[22m, ?[1m"10"?[22m, ?[1m"0"?[22m y tamaño ?[1m"Pequeño"?[22m?[39m                     ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.listShows(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[39m
+
+@HU-02 @registro @CA-REG-1 @CA-REG-3 @CA-REG-5 @positivo @alto @borde
+?[1mEsquema del escenario:?[22m 4 - Se aceptan valores en el borde y el tamaño se asigna según el peso ?[90m# classpath:features/registro.feature:26?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                                       ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mno tengo mascotas registradas?[39m                                                           ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.hasNoPets()?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mregistro una mascota ?[1m"Rocky"?[22m, ?[1mperro?[22m, ?[1m10,01?[22m kg, ?[1m5?[22m años, vacunas ?[1m"sí"?[22m?[39m                ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.registersAPet(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mla lista muestra ?[1m"Rocky"?[22m, ?[1m"Perro"?[22m, ?[1m"10,01"?[22m, ?[1m"5"?[22m y tamaño ?[1m"Mediano"?[22m?[39m               ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.listShows(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[39m
+
+@HU-02 @registro @CA-REG-1 @CA-REG-3 @CA-REG-5 @positivo @alto @borde
+?[1mEsquema del escenario:?[22m 4 - Se aceptan valores en el borde y el tamaño se asigna según el peso ?[90m# classpath:features/registro.feature:27?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                                       ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mno tengo mascotas registradas?[39m                                                           ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.hasNoPets()?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mregistro una mascota ?[1m"Bruno"?[22m, ?[1mperro?[22m, ?[1m24,99?[22m kg, ?[1m5?[22m años, vacunas ?[1m"sí"?[22m?[39m                ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.registersAPet(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mla lista muestra ?[1m"Bruno"?[22m, ?[1m"Perro"?[22m, ?[1m"24,99"?[22m, ?[1m"5"?[22m y tamaño ?[1m"Mediano"?[22m?[39m               ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.listShows(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[39m
+
+@HU-02 @registro @CA-REG-1 @CA-REG-3 @CA-REG-5 @positivo @alto @borde
+?[1mEsquema del escenario:?[22m 4 - Se aceptan valores en el borde y el tamaño se asigna según el peso ?[90m# classpath:features/registro.feature:28?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                                       ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mno tengo mascotas registradas?[39m                                                           ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.hasNoPets()?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mregistro una mascota ?[1m"Thor"?[22m, ?[1mperro?[22m, ?[1m25?[22m kg, ?[1m25?[22m años, vacunas ?[1m"sí"?[22m?[39m                   ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.registersAPet(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mla lista muestra ?[1m"Thor"?[22m, ?[1m"Perro"?[22m, ?[1m"25"?[22m, ?[1m"25"?[22m y tamaño ?[1m"Grande"?[22m?[39m                   ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.listShows(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[39m
+
+@HU-02 @registro @CA-REG-1 @CA-REG-3 @CA-REG-5 @positivo @alto @borde
+?[1mEsquema del escenario:?[22m 4 - Se aceptan valores en el borde y el tamaño se asigna según el peso        ?[90m# classpath:features/registro.feature:29?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                                              ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mno tengo mascotas registradas?[39m                                                                  ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.hasNoPets()?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mregistro una mascota ?[1m"Maximiliano Fernando Gutierrez"?[22m, ?[1mperro?[22m, ?[1m80?[22m kg, ?[1m5?[22m años, vacunas ?[1m"sí"?[22m?[39m ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.registersAPet(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mla lista muestra ?[1m"Maximiliano Fernando Gutierrez"?[22m, ?[1m"Perro"?[22m, ?[1m"80"?[22m, ?[1m"5"?[22m y tamaño ?[1m"Grande"?[22m?[39m ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.listShows(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[39m
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+]]></system-err>
+</testsuite>

@@ -18,22 +18,20 @@ ext {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.14.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.14.0'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Serenity BDD + Screenplay (todas con la misma version)
+    testImplementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-ensure:${serenityVersion}"
 
     // Runner de Cucumber sobre JUnit 5
     testImplementation 'org.junit.platform:junit-platform-suite:1.14.0'
     testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.34.2'
-
-    testImplementation "net.serenity-bdd:serenity-junit:${serenityVersion}"
-    implementation "net.serenity-bdd:serenity-core:${serenityVersion}"
-    implementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
-    implementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
-    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
     // WebDriver (una sola version de Selenium para todo el proyecto)
-    implementation "org.seleniumhq.selenium:selenium-java:${seleniumVersion}"
+    testImplementation "org.seleniumhq.selenium:selenium-java:${seleniumVersion}"
 
     // Logs (quita el aviso "No SLF4J providers were found")
     testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.20'
@@ -48,9 +46,16 @@ configurations.all {
     }
 }
 
+// Tildes y ñ en el codigo y en los .feature (Windows no usa UTF-8 por defecto)
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
 test {
     useJUnitPlatform()
-    test.finalizedBy(aggregate)
-    // Pasar propiedades del sistema a los tests
-    systemProperties = System.properties
+    // Propaga -Denvironment, -Dcucumber.filter.tags, etc.
+    systemProperties System.getProperties()
+    systemProperty 'file.encoding', 'UTF-8'
+    // aggregate se ejecuta aunque fallen escenarios, así que el reporte siempre se genera
+    finalizedBy 'aggregate'
 }

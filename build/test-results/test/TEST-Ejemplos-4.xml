@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ejemplos" tests="3" skipped="0" failures="1" errors="0" timestamp="2026-10-12T02:24:15.355Z" hostname="JOHAN" time="22.315">
+  <properties/>
+  <testcase name="Example #1.1" classname="Ejemplos" time="7.022">
+    <failure message="java.lang.AssertionError: Expected: el descuento por estadía larga that is equal to: &lt;&quot;$0&quot;&gt;&#10;Actual:   &lt;&quot;$42.000&quot;&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Expected: el descuento por estadía larga that is equal to: &lt;&quot;$0&quot;&gt;
+Actual:   &lt;&quot;$42.000&quot;&gt;
+	at net.serenitybdd.screenplay.ensure.PerformableExpectationsKt.handleException(PerformableExpectations.kt:14)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation.performAs(PerformableExpectations.kt:51)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$oGqmDpV1.performAs$accessor$zI6neyzT(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:550)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:530)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:492)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:234)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$oGqmDpV1.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at com.petstay.stepdefinitions.BookingStepDefinitions.summaryShows(BookingStepDefinitions.java:59)
+	at ✽.el resumen muestra alojamiento &quot;$280.000&quot;, descuento &quot;$0&quot; y total &quot;$280.000&quot;(classpath:features/reserva.feature:20)
+</failure>
+  </testcase>
+  <testcase name="Example #1.2" classname="Ejemplos" time="7.41"/>
+  <testcase name="Example #1.3" classname="Ejemplos" time="7.882"/>
+  <system-out><![CDATA[
+@HU-02 @reserva @CA-RES-4 @CA-RES-5 @CA-RES-7 @CA-RES-8 @positivo @critico @borde
+?[1mEsquema del escenario:?[22m 7 - El descuento aplica desde la octava noche y hasta el máximo de 30 ?[90m# classpath:features/reserva.feature:24?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                                      ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Toby"?[22m de ?[1m8?[22m kg (?[1mPequeño?[22m)?[39m                                     ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Rocky"?[22m de ?[1m15?[22m kg (?[1mMediano?[22m)?[39m                                   ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mgato?[22m ?[1m"Michi"?[22m de ?[1m4?[22m kg (?[1mPequeño?[22m)?[39m                                     ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mpreparo una reserva para ?[1m"Toby"?[22m con entrada el día ?[1m+5?[22m y ?[1m7?[22m noches, sin servicios?[39m   ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.preparesABookingWithoutServices(java.lang.String,java.time.LocalDate,int)?[39m
+  ?[31m✘?[39m ?[31m?[1mEntonces ?[22mel resumen muestra alojamiento ?[1m"$280.000"?[22m, descuento ?[1m"$0"?[22m y total ?[1m"$280.000"?[22m?[39m    ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.summaryShows(java.lang.String,java.lang.String,java.lang.String)?[39m
+        ?[31mjava.lang.AssertionError: Expected: el descuento por estadía larga that is equal to: <"$0">?[39m
+        ?[31mActual:   <"$42.000">?[39m
+        ?[31m	at net.serenitybdd.screenplay.ensure.PerformableExpectationsKt.handleException(PerformableExpectations.kt:14)?[39m
+        ?[31m	at net.serenitybdd.screenplay.ensure.PerformableExpectation.performAs(PerformableExpectations.kt:51)?[39m
+        ?[31m	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$oGqmDpV1.performAs$accessor$zI6neyzT(Unknown Source)?[39m
+        ?[31m	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)?[39m
+        ?[31m	at java.base/java.lang.reflect.Method.invoke(Method.java:580)?[39m
+        ?[31m	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:550)?[39m
+        ?[31m	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:530)?[39m
+        ?[31m	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:492)?[39m
+        ?[31m	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:234)?[39m
+        ?[31m	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)?[39m
+        ?[31m	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)?[39m
+        ?[31m	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)?[39m
+        ?[31m	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$oGqmDpV1.performAs(Unknown Source)?[39m
+        ?[31m	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)?[39m
+        ?[31m	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)?[39m
+        ?[31m	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)?[39m
+        ?[31m	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)?[39m
+        ?[31m	at com.petstay.stepdefinitions.BookingStepDefinitions.summaryShows(BookingStepDefinitions.java:59)?[39m
+        ?[31m	at ✽.el resumen muestra alojamiento "$280.000", descuento "$0" y total "$280.000"(classpath:features/reserva.feature:20)?[39m
+
+@HU-02 @reserva @CA-RES-4 @CA-RES-5 @CA-RES-7 @CA-RES-8 @positivo @critico @borde
+?[1mEsquema del escenario:?[22m 7 - El descuento aplica desde la octava noche y hasta el máximo de 30   ?[90m# classpath:features/reserva.feature:25?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                                        ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Toby"?[22m de ?[1m8?[22m kg (?[1mPequeño?[22m)?[39m                                       ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Rocky"?[22m de ?[1m15?[22m kg (?[1mMediano?[22m)?[39m                                     ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mgato?[22m ?[1m"Michi"?[22m de ?[1m4?[22m kg (?[1mPequeño?[22m)?[39m                                       ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mpreparo una reserva para ?[1m"Toby"?[22m con entrada el día ?[1m+5?[22m y ?[1m8?[22m noches, sin servicios?[39m     ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.preparesABookingWithoutServices(java.lang.String,java.time.LocalDate,int)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mel resumen muestra alojamiento ?[1m"$320.000"?[22m, descuento ?[1m"$48.000"?[22m y total ?[1m"$272.000"?[22m?[39m ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.summaryShows(java.lang.String,java.lang.String,java.lang.String)?[39m
+
+@HU-02 @reserva @CA-RES-4 @CA-RES-5 @CA-RES-7 @CA-RES-8 @positivo @critico @borde
+?[1mEsquema del escenario:?[22m 7 - El descuento aplica desde la octava noche y hasta el máximo de 30        ?[90m# classpath:features/reserva.feature:26?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                                             ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Toby"?[22m de ?[1m8?[22m kg (?[1mPequeño?[22m)?[39m                                            ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Rocky"?[22m de ?[1m15?[22m kg (?[1mMediano?[22m)?[39m                                          ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mgato?[22m ?[1m"Michi"?[22m de ?[1m4?[22m kg (?[1mPequeño?[22m)?[39m                                            ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mpreparo una reserva para ?[1m"Toby"?[22m con entrada el día ?[1m+5?[22m y ?[1m30?[22m noches, sin servicios?[39m         ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.preparesABookingWithoutServices(java.lang.String,java.time.LocalDate,int)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mel resumen muestra alojamiento ?[1m"$1.200.000"?[22m, descuento ?[1m"$180.000"?[22m y total ?[1m"$1.020.000"?[22m?[39m ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.summaryShows(java.lang.String,java.lang.String,java.lang.String)?[39m
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+]]></system-err>
+</testsuite>

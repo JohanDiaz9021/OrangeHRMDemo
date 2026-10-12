@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Registro de mascotas" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-12T02:23:15.753Z" hostname="JOHAN" time="59.6">
+  <properties/>
+  <testcase name="3 - No se registra una mascota sin vacunas al día" classname="feature_classpath_features/registro.feature" time="9.388"/>
+  <testcase name="6 - No se permite un nombre repetido sin importar mayúsculas" classname="feature_classpath_features/registro.feature" time="5.707"/>
+  <system-out><![CDATA[
+@HU-02 @registro @CA-REG-2 @negativo @critico @smoke
+?[1mEscenario:?[22m 3 - No se registra una mascota sin vacunas al día                  ?[90m# classpath:features/registro.feature:13?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                       ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mno tengo mascotas registradas?[39m                                           ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.hasNoPets()?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mregistro una mascota ?[1m"Luna"?[22m, ?[1mgato?[22m, ?[1m4?[22m kg, ?[1m3?[22m años, vacunas ?[1m"no"?[22m?[39m      ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.registersAPet(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mveo el mensaje ?[1m"No podemos hospedar mascotas sin vacunas al día"?[22m?[39m ?[90m# com.petstay.stepdefinitions.AccessStepDefinitions.seesTheMessage(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22m?[1m"Luna"?[22m no aparece en mi lista de mascotas?[39m                               ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.petIsNotListed(java.lang.String)?[39m
+
+@HU-02 @registro @CA-REG-4 @negativo @medio
+?[1mEscenario:?[22m 6 - No se permite un nombre repetido sin importar mayúsculas  ?[90m# classpath:features/registro.feature:46?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                  ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mno tengo mascotas registradas?[39m                                      ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.hasNoPets()?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque tengo registrada la mascota ?[1m"Max"?[22m?[39m                           ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.hasThePet(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mregistro una mascota ?[1m"MAX"?[22m, ?[1mperro?[22m, ?[1m8?[22m kg, ?[1m2?[22m años, vacunas ?[1m"sí"?[22m?[39m ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.registersAPet(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mel registro es rechazado?[39m                                    ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.registrationIsRejected()?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mla lista tiene una sola mascota llamada ?[1m"Max"?[22m?[39m                      ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.listHasOnlyOnePetNamed(java.lang.String)?[39m
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+]]></system-err>
+</testsuite>

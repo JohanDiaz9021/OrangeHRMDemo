@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Acceso a PetStay" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-12T02:22:09.153Z" hostname="JOHAN" time="6.118">
+  <properties/>
+  <testcase name="1 - Ingreso con credenciales válidas" classname="feature_classpath_features/acceso.feature" time="3.707"/>
+  <testcase name="2 - Ingreso con contraseña incorrecta" classname="feature_classpath_features/acceso.feature" time="2.407"/>
+  <system-out><![CDATA[
+@HU-02 @acceso @CA-ACC-1 @positivo @alto @smoke
+?[1mEscenario:?[22m 1 - Ingreso con credenciales válidas                      ?[90m# classpath:features/acceso.feature:9?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque estoy en la pantalla de inicio de sesión?[39m                ?[90m# com.petstay.stepdefinitions.AccessStepDefinitions.isOnTheLoginPage()?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mingreso el usuario ?[1m"dueno"?[22m y la contraseña ?[1m"huellitas123"?[22m?[39m ?[90m# com.petstay.stepdefinitions.AccessStepDefinitions.logsIn(java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mveo la pantalla principal del hotel?[39m                     ?[90m# com.petstay.stepdefinitions.AccessStepDefinitions.seesTheMainPage()?[39m
+
+@HU-02 @acceso @CA-ACC-2 @negativo @alto
+?[1mEscenario:?[22m 2 - Ingreso con contraseña incorrecta                     ?[90m# classpath:features/acceso.feature:15?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque estoy en la pantalla de inicio de sesión?[39m                ?[90m# com.petstay.stepdefinitions.AccessStepDefinitions.isOnTheLoginPage()?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mingreso el usuario ?[1m"dueno"?[22m y la contraseña ?[1m"huellitas999"?[22m?[39m ?[90m# com.petstay.stepdefinitions.AccessStepDefinitions.logsIn(java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mveo el mensaje ?[1m"Usuario o contraseña incorrectos"?[22m?[39m       ?[90m# com.petstay.stepdefinitions.AccessStepDefinitions.seesTheMessage(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22msigo en la pantalla de inicio de sesión?[39m                        ?[90m# com.petstay.stepdefinitions.AccessStepDefinitions.staysOnTheLoginPage()?[39m
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+]]></system-err>
+</testsuite>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ejemplos" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-12T02:24:45.302Z" hostname="JOHAN" time="38.949">
+  <properties/>
+  <testcase name="Example #1.1" classname="Ejemplos" time="8.453"/>
+  <testcase name="Example #1.2" classname="Ejemplos" time="12.174"/>
+  <testcase name="Example #1.3" classname="Ejemplos" time="9.569"/>
+  <testcase name="Example #1.4" classname="Ejemplos" time="8.753"/>
+  <system-out><![CDATA[
+@HU-02 @reserva @CA-RES-2 @CA-RES-3 @CA-RES-4 @negativo @alto @borde @depende-fecha
+?[1mEsquema del escenario:?[22m 9 - Se rechazan fechas inválidas o estadías de más de 30 noches ?[90m# classpath:features/reserva.feature:47?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                                ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Toby"?[22m de ?[1m8?[22m kg (?[1mPequeño?[22m)?[39m                               ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Rocky"?[22m de ?[1m15?[22m kg (?[1mMediano?[22m)?[39m                             ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mgato?[22m ?[1m"Michi"?[22m de ?[1m4?[22m kg (?[1mPequeño?[22m)?[39m                               ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mpreparo una reserva para ?[1m"Toby"?[22m del día ?[1m+5?[22m al día ?[1m+36?[22m?[39m                       ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.preparesABookingBetween(java.lang.String,java.time.LocalDate,java.time.LocalDate)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mla reserva es rechazada?[39m                                                   ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.bookingIsRejected()?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22m?[1m"Toby"?[22m no tiene reservas?[39m                                                         ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.petHasNoBookings(java.lang.String)?[39m
+
+@HU-02 @reserva @CA-RES-2 @CA-RES-3 @CA-RES-4 @negativo @alto @borde @depende-fecha
+?[1mEsquema del escenario:?[22m 9 - Se rechazan fechas inválidas o estadías de más de 30 noches ?[90m# classpath:features/reserva.feature:48?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                                ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Toby"?[22m de ?[1m8?[22m kg (?[1mPequeño?[22m)?[39m                               ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Rocky"?[22m de ?[1m15?[22m kg (?[1mMediano?[22m)?[39m                             ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mgato?[22m ?[1m"Michi"?[22m de ?[1m4?[22m kg (?[1mPequeño?[22m)?[39m                               ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mpreparo una reserva para ?[1m"Toby"?[22m del día ?[1m+5?[22m al día ?[1m+5?[22m?[39m                        ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.preparesABookingBetween(java.lang.String,java.time.LocalDate,java.time.LocalDate)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mla reserva es rechazada?[39m                                                   ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.bookingIsRejected()?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22m?[1m"Toby"?[22m no tiene reservas?[39m                                                         ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.petHasNoBookings(java.lang.String)?[39m
+
+@HU-02 @reserva @CA-RES-2 @CA-RES-3 @CA-RES-4 @negativo @alto @borde @depende-fecha
+?[1mEsquema del escenario:?[22m 9 - Se rechazan fechas inválidas o estadías de más de 30 noches ?[90m# classpath:features/reserva.feature:49?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                                ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Toby"?[22m de ?[1m8?[22m kg (?[1mPequeño?[22m)?[39m                               ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Rocky"?[22m de ?[1m15?[22m kg (?[1mMediano?[22m)?[39m                             ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mgato?[22m ?[1m"Michi"?[22m de ?[1m4?[22m kg (?[1mPequeño?[22m)?[39m                               ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mpreparo una reserva para ?[1m"Toby"?[22m del día ?[1m+5?[22m al día ?[1m+4?[22m?[39m                        ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.preparesABookingBetween(java.lang.String,java.time.LocalDate,java.time.LocalDate)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mla reserva es rechazada?[39m                                                   ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.bookingIsRejected()?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22m?[1m"Toby"?[22m no tiene reservas?[39m                                                         ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.petHasNoBookings(java.lang.String)?[39m
+
+@HU-02 @reserva @CA-RES-2 @CA-RES-3 @CA-RES-4 @negativo @alto @borde @depende-fecha
+?[1mEsquema del escenario:?[22m 9 - Se rechazan fechas inválidas o estadías de más de 30 noches ?[90m# classpath:features/reserva.feature:50?[39m
+  ?[32m✔?[39m ?[32m?[1mDado ?[22mque inicié sesión como ?[1m"dueno"?[22m?[39m                                                ?[90m# com.petstay.stepdefinitions.PetStepDefinitions.isLoggedInAs(java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Toby"?[22m de ?[1m8?[22m kg (?[1mPequeño?[22m)?[39m                               ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mperro?[22m ?[1m"Rocky"?[22m de ?[1m15?[22m kg (?[1mMediano?[22m)?[39m                             ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22mtengo registrado el ?[1mgato?[22m ?[1m"Michi"?[22m de ?[1m4?[22m kg (?[1mPequeño?[22m)?[39m                               ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.hasRegisteredThePet(java.lang.String,java.lang.String,int,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mCuando ?[22mpreparo una reserva para ?[1m"Toby"?[22m del día ?[1m-1?[22m al día ?[1m+3?[22m?[39m                        ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.preparesABookingBetween(java.lang.String,java.time.LocalDate,java.time.LocalDate)?[39m
+  ?[32m✔?[39m ?[32m?[1mEntonces ?[22mla reserva es rechazada?[39m                                                   ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.bookingIsRejected()?[39m
+  ?[32m✔?[39m ?[32m?[1mY ?[22m?[1m"Toby"?[22m no tiene reservas?[39m                                                         ?[90m# com.petstay.stepdefinitions.BookingStepDefinitions.petHasNoBookings(java.lang.String)?[39m
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+]]></system-err>
+</testsuite>
