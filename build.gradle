@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '5.3.9'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    serenityVersion = '5.3.11'
+    seleniumVersion = '4.50.0'
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.14.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.14.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Runner de Cucumber sobre JUnit 5
+    testImplementation 'org.junit.platform:junit-platform-suite:1.14.0'
+    testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.34.2'
+
+    testImplementation "net.serenity-bdd:serenity-junit:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
+
+    // WebDriver (una sola version de Selenium para todo el proyecto)
+    implementation "org.seleniumhq.selenium:selenium-java:${seleniumVersion}"
+
+    // Logs (quita el aviso "No SLF4J providers were found")
+    testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.20'
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { details ->
+        // htmlunit3-driver tiene su propia numeracion de versiones
+        if (details.requested.group == 'org.seleniumhq.selenium' && details.requested.name != 'htmlunit3-driver') {
+            details.useVersion seleniumVersion
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+    test.finalizedBy(aggregate)
+    // Pasar propiedades del sistema a los tests
+    systemProperties = System.properties
+}
