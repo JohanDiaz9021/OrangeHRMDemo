@@ -9,7 +9,7 @@ Característica: Mis reservas y cancelación
     Dado que inicié sesión como "dueno"
     Y tengo registrado el perro "Toby" de 8 kg (Pequeño)
 
-  @CA-CAN-1 @CA-CAN-2 @CA-CAN-3 @CA-CAN-4 @positivo @critico @borde @depende-fecha @smoketest
+  @CA-CAN-1 @CA-CAN-2 @CA-CAN-3 @CA-CAN-4 @positivo @critico @borde @depende-fecha @smoketest @Issue-13
   Esquema del escenario: 13 - El reembolso depende de los días que faltan para la entrada
     Dado que "Toby" tiene una reserva Confirmada de 2 noches por $80.000 con entrada el día +<dias>
     Cuando cancelo la reserva y acepto la confirmación
@@ -23,14 +23,14 @@ Característica: Mis reservas y cancelación
       | 1    | $40.000   | primer día con 50%      |
       | 0    | $0        | mismo día de la entrada |
 
-  @CA-CAN-2 @positivo @medio
+  @CA-CAN-2 @positivo @medio @Issue-14
   Escenario: 14 - Si no confirmo la cancelación, la reserva se mantiene
     Dado que "Toby" tiene una reserva Confirmada de 2 noches por $80.000 con entrada el día +10
     Cuando cancelo la reserva y rechazo la confirmación
     Entonces la reserva sigue en estado "Confirmada"
     Y la lista no muestra reembolso para esa reserva
 
-  @CA-CAN-4 @negativo @alto
+  @CA-CAN-4 @negativo @alto @Issue-15
   Escenario: 15 - Una reserva cancelada no se puede volver a cancelar
     Dado que "Toby" tiene una reserva en estado "Cancelada" con reembolso de $80.000
     Entonces la opción de cancelar no está disponible para esa reserva

@@ -14,7 +14,7 @@ Característica: Reserva de estadía
     Y tengo registrado el perro "Rocky" de 15 kg (Mediano)
     Y tengo registrado el gato "Michi" de 4 kg (Pequeño)
 
-  @CA-RES-4 @CA-RES-5 @CA-RES-7 @CA-RES-8 @positivo @critico @borde
+  @CA-RES-4 @CA-RES-5 @CA-RES-7 @CA-RES-8 @positivo @critico @borde @Issue-7
   Esquema del escenario: 7 - El descuento aplica desde la octava noche y hasta el máximo de 30
     Cuando preparo una reserva para "Toby" con entrada el día +5 y <noches> noches, sin servicios
     Entonces el resumen muestra alojamiento "<alojamiento>", descuento "<descuento>" y total "<total>"
@@ -25,7 +25,7 @@ Característica: Reserva de estadía
       | 8      | $320.000    | $48.000   | $272.000   | primera con descuento |
       | 30     | $1.200.000  | $180.000  | $1.020.000 | estadía máxima        |
 
-  @CA-RES-6 @CA-RES-7 @CA-RES-8 @CA-RES-10 @positivo @critico @smoketest
+  @CA-RES-6 @CA-RES-7 @CA-RES-8 @CA-RES-10 @positivo @critico @smoketest @Issue-8
   Escenario: 8 - El descuento no se aplica a los servicios
     Cuando preparo una reserva para "Rocky" con entrada el día +5 y 10 noches
     Y agrego "Baño y peluquería" y "Paseo diario"
@@ -36,7 +36,7 @@ Característica: Reserva de estadía
     Entonces se genera un código con formato "PS-XXXX"
     Y la reserva queda en estado "Confirmada"
 
-  @CA-RES-2 @CA-RES-3 @CA-RES-4 @negativo @alto @borde @depende-fecha
+  @CA-RES-2 @CA-RES-3 @CA-RES-4 @negativo @alto @borde @depende-fecha @Issue-9
   Esquema del escenario: 9 - Se rechazan fechas inválidas o estadías de más de 30 noches
     Cuando preparo una reserva para "Toby" del día <entrada> al día <salida>
     Entonces la reserva es rechazada
@@ -49,19 +49,19 @@ Característica: Reserva de estadía
       | +5      | +4     | salida anterior a la entrada  |
       | -1      | +3     | entrada anterior a hoy        |
 
-  @CA-RES-6 @negativo @alto
+  @CA-RES-6 @negativo @alto @Issue-10
   Escenario: 10 - El paseo diario no está disponible para gatos
     Cuando preparo una reserva para "Michi" con entrada el día +5 y 3 noches
     Entonces la opción "Paseo diario" no está disponible
     Y el total es "$120.000"
 
-  @CA-RES-9 @positivo @alto @borde
+  @CA-RES-9 @positivo @alto @borde @Issue-11
   Escenario: 11 - Una reserva puede empezar el día que termina otra
     Dado que "Toby" tiene una reserva Confirmada del día +10 al día +15
     Cuando reservo para "Toby" del día +15 al día +18
     Entonces la nueva reserva queda en estado "Confirmada"
 
-  @CA-RES-9 @negativo @alto @borde
+  @CA-RES-9 @negativo @alto @borde @Issue-12
   Escenario: 12 - Una mascota no puede tener reservas que se crucen
     Dado que "Toby" tiene una reserva Confirmada del día +10 al día +15
     Cuando reservo para "Toby" del día +14 al día +18

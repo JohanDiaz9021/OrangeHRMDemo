@@ -9,13 +9,13 @@ Característica: Registro de mascotas
     Dado que inicié sesión como "dueno"
     Y no tengo mascotas registradas
 
-  @CA-REG-2 @negativo @critico @smoketest
+  @CA-REG-2 @negativo @critico @smoketest @Issue-3
   Escenario: 3 - No se registra una mascota sin vacunas al día
     Cuando registro una mascota "Luna", gato, 4 kg, 3 años, vacunas "no"
     Entonces veo el mensaje "No podemos hospedar mascotas sin vacunas al día"
     Y "Luna" no aparece en mi lista de mascotas
 
-  @CA-REG-1 @CA-REG-3 @CA-REG-5 @positivo @alto @borde
+  @CA-REG-1 @CA-REG-3 @CA-REG-5 @positivo @alto @borde @Issue-4
   Esquema del escenario: 4 - Se aceptan valores en el borde y el tamaño se asigna según el peso
     Cuando registro una mascota "<nombre>", perro, <peso> kg, <edad> años, vacunas "sí"
     Entonces la lista muestra "<nombre>", "Perro", "<peso>", "<edad>" y tamaño "<tamaño>"
@@ -28,7 +28,7 @@ Característica: Registro de mascotas
       | Thor                           | 25    | 25   | Grande  | primer valor grande, edad 25    |
       | Maximiliano Fernando Gutierrez | 80    | 5    | Grande  | nombre 30 car., peso máximo     |
 
-  @CA-REG-1 @negativo @medio @borde
+  @CA-REG-1 @negativo @medio @borde @Issue-5
   Esquema del escenario: 5 - Se rechazan valores fuera de rango
     Cuando registro una mascota "<nombre>", perro, <peso> kg, <edad> años, vacunas "sí"
     Entonces el registro es rechazado
@@ -42,7 +42,7 @@ Característica: Registro de mascotas
       | Kira                            | 80,01 | 3    | peso mayor a 80   |
       | Kira                            | 5     | 26   | edad mayor a 25   |
 
-  @CA-REG-4 @negativo @medio
+  @CA-REG-4 @negativo @medio @Issue-6
   Escenario: 6 - No se permite un nombre repetido sin importar mayúsculas
     Dado que tengo registrada la mascota "Max"
     Cuando registro una mascota "MAX", perro, 8 kg, 2 años, vacunas "sí"
